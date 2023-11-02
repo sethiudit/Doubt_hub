@@ -45,7 +45,8 @@
             $mail->Host = "smtp.gmail.com"; 
             $mail->SMTPAuth = true;
             $mail->Username = "cyber2sk@gmail.com"; 
-            $mail->Password = "sjfazpmjejnqhuxp"; 
+            //password hide for security purposes
+            $mail->Password = ""; 
             $mail->Port = 587;
             $mail->SMTPSecure = 'tls';
             $mail->IsHTML(true);
