@@ -4,12 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="S_discuss_logo.png"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <link rel="stylesheet" href="style2.css">
     <link rel="stylesheet" href="style.css">
-    <title>S_Discuss.!</title>
+    <title>Doubt_Hub</title>
 </head>
 
 <body class="boddd">
@@ -65,7 +66,7 @@
                                     </div>
                                 </form>
                                 <div class="form-card-info">
-                                    <p><a href="http://localhost/phpt/forum_project/index.php">Back to home</a></p>
+                                    <p><a href="http://s-discuss.rf.gd/index.php">Back to home</a></p>
                                 </div>
                             </div>
                         </div>
@@ -87,7 +88,7 @@
                             <h3 style="font-color: #8597a3;"> '.$error.'</h3>
                         </div>
                         <div class="form-action mb-4">
-                            <a href="http://localhost/phpt/forum_project/index.php"><button type="submit" value="Reset Password" class="form-action-button">Back to home</button></a>
+                            <a href="http://s-discuss.rf.gd/index.php"><button type="submit" value="Reset Password" class="form-action-button">Back to home</button></a>
                         </div>
                     </div>
                 </div>
@@ -118,7 +119,7 @@
                         <h3 style="font-color: #8597a3;"> '.$error.'</h3>
                         </div>
                         <div class="form-action mb-4">
-                            <a href="http://localhost/phpt/forum_project/set_new_pass.php?key='.$_GET["key"].'&email='.$email.'&action=reset"><button type="submit" value="Reset Password" class="form-action-button">Try again</button></a>
+                            <a href="http://s-discuss.rf.gd/set_new_pass.php?key='.$_GET["key"].'&email='.$email.'&action=reset"><button type="submit" value="Reset Password" class="form-action-button">Try again</button></a>
                         </div>
                     </div>
                 </div>
@@ -148,7 +149,7 @@
                                         </h2>
                                     </div>
                                     <div class="form-action mb-4">
-                                        <a href="http://localhost/phpt/forum_project/index.php"><button type="submit" value="Reset Password" class="form-action-button">Back to home</button></a>
+                                        <a href="http://s-discuss.rf.gd/index.php"><button type="submit" value="Reset Password" class="form-action-button">Back to home</button></a>
                                     </div>
                                 </div>
                             </div>

@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 
@@ -5,14 +6,14 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <link rel="shortcut icon" type="image/png" href="S_discuss_logo.png"/>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="style2.css">
     <!-- <link rel="stylesheet" href="style.css">     -->
 
-    <title>S_Discuss.!</title>
+    <title>Doubt_Hub</title>
     <style>
     .footer {
         position: fixed;
@@ -78,7 +79,7 @@
                     </div>
                 </div>
                 <div class="responsive-cell-block_contact wk-ipadp-6 wk-tab-12 wk-mobile-12 wk-desk-6 right-one" id="i1zj">
-                    <form class="form-box">
+                    <form class="form-box"  action="/website_issue_send.php" method="post" name="reset">
                         <div class="container-block form-wrapper">
                             <p class="contact-text-blk contactus-head">
                                 <a class="link" href="">
@@ -95,25 +96,26 @@
                                 </div>
                                 <div class="responsive-cell-block_contact wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12"
                                     id="i1ro7">
-                                    <input class="contact-from-input" id="indfi-5" name="Last Name" placeholder="Last Name" style="color:#f2f2f2;" require/>
+                                    <input class="contact-from-input" id="indfi-5" name="LastName" placeholder="Last Name" style="color:#f2f2f2;" require/>
                                 </div>
                                 <div class="responsive-cell-block_contact wk-tab-12 wk-mobile-12 wk-desk-6 wk-ipadp-6 emial"
                                     id="ityct">
-                                    <input type="email" class="contact-from-input" id="ipmgh-7" name="Email" placeholder="Email" style="color:#f2f2f2;" require/>
+                                    <input type="email" class="contact-from-input" id="ipmgh-7" name="contect_Email" placeholder="Email" style="color:#f2f2f2;" require/>
                                 </div>
                                 <div class="responsive-cell-block_contact wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
                                     <input  type="tel" minlength = "10" pattern="[0-9]{10}" class="contact-from-input" id="imgis-6" name="PhoneNumber" placeholder="Phone Number" style="color:#f2f2f2;">
                                 </div>
                                 <div class="responsive-cell-block_contact wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12"
                                     id="i634i-7">
-                                    <textarea aria-placeholder="Type message here" class="contact-from-textinput" id="i5vyy-7"
+                                    <textarea aria-placeholder="Type message here" name="issue" class="contact-from-textinput" id="i5vyy-7"
                                         placeholder="Type message here" style="color:#f2f2f2;"></textarea>
                                 </div>
                             </div>
                             
                             <button class="submit-btn">
                                 Get quote
-                            </button></div>
+                            </button>
+                        </div>
                         
                     </form>
                 </div>

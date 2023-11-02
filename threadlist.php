@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <link rel="shortcut icon" type="image/png" href="S_discuss_logo.png"/>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -14,10 +14,24 @@
     <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
     <link rel="stylesheet" href="style2.css">
     <link rel="stylesheet" href="style.css">
-    <title>S_Discuss.!</title>
+    <title>Doubt_Hub</title>
     <style>
     div.absolute {
         text-align: right;
+    }
+    @media (min-width: 992px) {
+        /* Styles for screens larger than or equal to 992px (desktop) */
+        .card-body {
+            display: flex;
+            align-items: center;
+        }
+
+        .card-body .rounded-circle {
+            width: 60px;
+            height: 60px;
+        }
+
+        /* Adjust other styles as needed */
     }
     </style>
 </head>
@@ -45,9 +59,24 @@
 
         $pblm_t = str_replace("<","&lt", $pblm_t);
         $pblm_t = str_replace(">","&gt", $pblm_t);
-        
+        $pblm_t = str_replace("'","&apos;",$pblm_t);
+        $pblm_t = str_replace("¢","&cent;",$pblm_t);
+        $pblm_t = str_replace("£","&pound;",$pblm_t);
+        $pblm_t = str_replace("¥","&yen;",$pblm_t);
+        $pblm_t = str_replace("€","&euro;",$pblm_t);
+        $pblm_t = str_replace("©","&copy;",$pblm_t);
+        $pblm_t = str_replace("®","&reg;",$pblm_t);
+
+
         $pblm_desc = str_replace("<","&lt;", $pblm_desc);
         $pblm_desc = str_replace(">","&gt;", $pblm_desc);
+        $pblm_desc = str_replace("'","&apos;",$pblm_desc);
+        $pblm_desc = str_replace("¢","&cent;",$pblm_desc);
+        $pblm_desc = str_replace("£","&pound;",$pblm_desc);
+        $pblm_desc = str_replace("¥","&yen;",$pblm_desc);
+        $pblm_desc = str_replace("€","&euro;",$pblm_desc);
+        $pblm_desc = str_replace("©","&copy;",$pblm_desc);
+        $pblm_desc = str_replace("®","&reg;",$pblm_desc);
 
         $user_id = $_POST['user_id'];
         
@@ -125,7 +154,7 @@
                                         <div id="emailHelp" class="form-text">keep your title as short and crisp as possible</div>
                                     </div>
                                     <div class="mb-3">
-                                        <label for="exampleInputPassword1" class="form-label">Elloborate Your Concorn</label>
+                                        <label for="exampleInputPassword1" class="form-label">Elloborate Your Problem</label>
                                         <textarea placeholder="Write your comment here!" class="form-control" id="desc" name="desc" row="3" required></textarea>
                                     </div>
                                     <input type="hidden" name="user_id" value = '.$_SESSION['user_id'].'>
@@ -180,17 +209,17 @@
                                             width="60" height="60" />
                                         <div>
                                             <div class="d-flex align-items-center" >   
-                                                <h5 class="fw-bold mb-1 " style="min-width:700px">'.$row2['user_firstname'].' '.$row2['user_lastname'].'</h5> 
+                                                <h5 class="fw-bold mb-1 " style="min-width:720px">'.$row2['user_firstname'].' '.$row2['user_lastname'].'</h5> 
                                                 <p class="fw-bold my-0 " >'.$tdt.'</p>
                                             </div>
                                             <div class="d-flex align-items-center mb-1">
                                                 <p class="mb-0">
-                                                <h6 class="fw-bold" style="min-width:795px"><a href="threads.php?t_id='.$ti.'" class="text-dark" style="text-decoration: none;">'.$tt.'</a></h6>
+                                                <h6 class="fw-bold" style="min-width:740px"><a href="threads.php?t_id='.$ti.'" class="text-dark" style="text-decoration: none; display: inline-block;">'.$tt.'</a></h6>
                                                     <span class="badge bg-success text-right">Approved</span>
                                                 </p>
                                             </div>
                                             <div class="d-flex align-items-center mb-1" >
-                                                <p class="mt-0" style="min-width:800px; max-width:5px;"><span style="font-size:20px; display:block; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;">
+                                                <p class="mt-0" style="min-width:790px; max-width:5px;"><span style="font-size:20px; display:block; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;">
                                                 '.$td.' </span></p>
                                                 <a href="#!" class="link-danger"><i class="icon fas fa-heart"></i></a>
                                                 <a href="#!" class="text-dark"><i class="icon fas fa-comment ms-2"></i></a>

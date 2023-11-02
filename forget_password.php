@@ -52,8 +52,8 @@ VALUES ('".$email."', '".$key."', '".$expDate."');");
 $output='<p>Dear user,</p>';
 $output.='<p>Please click on the following link to reset your password.</p>';
 $output.='<p>-------------------------------------------------------------</p>';
-$output.='<p><a href="http://localhost/phpt/forum_project/set_new_pass.php?key='.$key.'&email='.$email.'&action=reset" target="_blank">
-http://localhost/phpt/forum_project/set_new_pass.php?key='.$key.'&email='.$email.'&action=reset</a></p>';		
+$output.='<p><a href="http://doubt-hub.free.nf/set_new_pass.php?key='.$key.'&email='.$email.'&action=reset" target="_blank">
+http://doubt-hub.free.nf/set_new_pass.php?key='.$key.'&email='.$email.'&action=reset</a></p>';		
 $output.='<p>-------------------------------------------------------------</p>';
 $output.='<p>Please be sure to copy the entire link into your browser.
 The link will expire after 1 day for security reason.</p>';
@@ -61,9 +61,9 @@ $output.='<p>If you did not request this forgotten password email, no action
 is needed, your password will not be reset. However, you may want to log into 
 your account and change your security password as someone may have guessed it.</p>';   	
 $output.='<p>Thanks,</p>';
-$output.='<p>S_discus</p>';
+$output.='<p>Doubt Hub</p>';
 $body = $output; 
-$subject = "Password Recovery - S_discus";
+$subject = "Password Recovery - Doubt_Hub";
 $email_to = $email;
 $fromserver = "cyber2sk@gmail.com"; 
 
@@ -79,7 +79,7 @@ $mail->Port = 587;
 $mail->SMTPSecure = 'tls';
 $mail->IsHTML(true);
 $mail->From = "cyber2sk@gmail.com";
-$mail->FromName = "S_discuss";
+$mail->FromName = "Doubt_Hub";
 $mail->Sender = $fromserver;
 $mail->Subject = $subject;
 $mail->Body = $body;

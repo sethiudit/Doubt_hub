@@ -3,6 +3,6 @@ session_start();
 session_unset();
 session_destroy();
 
-header("Location: /phpt/forum_project/index.php");
+header("Location: /index.php");
 exit;
 ?>

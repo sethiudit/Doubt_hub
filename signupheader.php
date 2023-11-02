@@ -21,7 +21,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
         $sql= "INSERT INTO `users` (`user_firstname`, `user_lastname`, `user_email`, `user_password`, `user_dt`) VALUES ('$first_name','$last_name','$email', '$pass', current_timestamp());";
         $result= mysqli_query($conn,$sql);
         if($result){
-            header("Location: /phpt/forum_project/index.php?signupsuccess=true");
+            header("Location: /index.php?signupsuccess=true");
             exit();
         }
 
@@ -31,7 +31,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     }
     
     }
-    header("Location: /phpt/forum_project/index.php?signupsuccess=false&error=$showerror");
+    header("Location: /index.php?signupsuccess=false&error=$showerror");
 }
     
 ?>

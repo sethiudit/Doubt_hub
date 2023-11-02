@@ -5,13 +5,13 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <link rel="shortcut icon" type="image/png" href="S_discuss_logo.png"/>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <link rel="stylesheet" href="style2.css">
     <link rel="stylesheet" href="style.css">
-    <title>S_Discuss.!</title>
+    <title>Doubt_Hub</title>
 </head>
 
 <body>
@@ -40,6 +40,16 @@
         $comment = $_POST['comment'];
         $comment = str_replace("<","&lt;",$comment);
         $comment = str_replace(">","&gt;",$comment);
+        // $comment = str_replace(" ","&nbse;",$comment);
+        // $comment = str_replace("&","&amp;",$comment);
+        // $comment = str_replace("""," "&quot;",$comment);
+        $comment = str_replace("'","&apos;",$comment);
+        $comment = str_replace("¢","&cent;",$comment);
+        $comment = str_replace("£","&pound;",$comment);
+        $comment = str_replace("¥","&yen;",$comment);
+        $comment = str_replace("€","&euro;",$comment);
+        $comment = str_replace("©","&copy;",$comment);
+        $comment = str_replace("®","&reg;",$comment);
         $user_id = $_POST['user_id'];
         
         $sql = "INSERT INTO `comments` (`comment_content`, `thread_id`, `comment_by`, `comment_dt`) VALUES ('$comment', '$id', '$user_id', current_timestamp())";
@@ -66,7 +76,7 @@
         <div class="alert-info p-3" style="border-radius:10px;">
             <h3 class="display-5"><?php echo $tt;?> !</h3>
             <hr class="my-4">
-            <strong>Description : </strong><?php echo $td;?>
+            <strong>Description : </strong><?php echo '<pre >'.$td.'</pre>';?>
             
         </div>
     </div>
@@ -76,15 +86,20 @@
         <?php
         if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']==true){
             echo'
+            
+            <div class="panel-body">
                 <form action="'.$_SERVER['REQUEST_URI'].'" method="post" class="bg-transparent">
                     <div style="width: 40%; height: 50px; float:left;">  
-                            <input type="text" placeholder="Type your Comment..." class="form-control mb-2" id="desc" name="comment"  style="width:500px; height:50px; border-radius: 25px; " required>
+                            <div class="mb-3">
+                                <textarea placeholder="Write your comment here!" class="form-control" id="desc" name="comment" row="10" required></textarea>
+                            </div>
                             <input type="hidden" name="user_id" value = '.$_SESSION['user_id'].'>
                     </div>
                     <div style="width:60%; height: 50px; float:left;">
                         <button type="submit" class="btn btn-success" style="font-family: verdana; font-weight: lighter;  border-radius: 25px; height:50px; background-image: linear-gradient(-45deg, #ff5959, #ff4040,#ff8033,#d74177);">Post Comment</button>
                     </div>
-                </form>';
+                </form>
+            </div>';
         }
         else{
             echo 'You are not logged in. Please login to be able to post comment';
@@ -113,13 +128,13 @@
             $row2 = mysqli_fetch_assoc($result2);
         
             echo'
-                <div class="d-flex my-3" style=" width: 600px; padding: 10px; border: 2px solid #deb10f; box-shadow: rgba(183, 178, 178, 0.573) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px; border-radius: 10px;">
+                <div class="d-flex my-3" style="padding: 10px; border: 2px solid #deb10f; box-shadow: rgba(183, 178, 178, 0.573) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px; border-radius: 10px;">
                     
                     <img src="https://picsum.photos/60/60?random=1" class="me-3 rounded-circle" style="width: 60px; height: 60px;">
                     <div>
                     <h5 class="fw-bold my-0">'.$row2['user_firstname'].' '.$row2['user_lastname'].'</h5>
                         <p>
-                            '.$cc.'
+                        <pre style="max-width: 1000px;">'.$cc.'</pre>
                         </p>
                     </div>              
                 </div>';

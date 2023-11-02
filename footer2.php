@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Doubt_Hub</title>
 
     <!-- footer icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -19,7 +19,7 @@
             <div class="row">
                 <div class="col-sm-12 col-md-6">
                     <h6>About</h6>
-                    <p class="text-justify">S_Discuss.com provide a chat board for communication where you can ask your doubts and answer any other questions you may have. 
+                    <p class="text-justify">Doubt_Hub.com provide a chat board for communication where you can ask your doubts and answer any other questions you may have. 
               If you want to communicate with other users, you must first log in to the website with email and your personal password. 
               Here you can see different threads for different programming languages, so you can see any one according to your profession.</p>
                 </div>
@@ -51,7 +51,7 @@
             <div class="row">
                 <div class="col-md-8 col-sm-6 col-xs-12">
                     <p class="copyright-text">Copyright &copy; 2022 All Rights Reserved by
-                        <a href="#">s_discuse</a>.
+                        <a href="#">Doubt_Hub</a>.
                     </p>
                 </div>
 
@@ -61,7 +61,9 @@
                         <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
                         <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
                         <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <a  href="https://github.com/sethiudit/Doubt_hub">Github </a>
                     </ul>
+                    
                 </div>
             </div>
         </div>
